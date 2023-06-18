@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video tracker</title>
+
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body id="top">
+
+  <div class="header">
+    <a href="index.html" style="margin-left: 20px; top: 0;">
+      <img src="./images/logo.svg" width="120" height="120" alt="Tracker logo">
+    </a>
+    <div class="navbar">
+
+      <ul class="navbar-list">
+
+        <li>
+          <span class="nav-badge"><a href="./index.html" class=""
+              style="color: white; padding: 5px; text-decoration: none;"><i class="fa fa-home"
+                style="margin-right: 5px"></i>Home</a></span>
+        </li>
+
+        <li>
+          <span class="nav-badge" style="background-color: #3A3333"><a href="#" class=""
+              style="color: white; padding: 5px; text-decoration: none;"><i class="fa fa-gg-circle"
+                style="margin-right: 5px"></i>Trackers</a>
+        </li>
+
+        <li>
+          <span class="nav-badge" style="background-color: #3A3333"><a href="#" class=""
+              style="color: white; padding: 5px; text-decoration: none;"><i class="fa fa-heart-o"
+                style="margin-right: 5px"></i>Favorites</a>
+        </li>
+
+      </ul>
+      <p id="searchBar"><i class="fa fa-search" style="margin-right: 10px"></i>Search Videos</p>
+      <div id="searcher"><i id="closeSearch" class="fa fa-close fa-3x" style="margin-top: 3%"></i><input type="text"
+          id="searchInput" placeholder="Search Videos" name="searchInput"></div>
+    </div>
+    <div class="header-profile">
+      <img src="./images/jane-doe.jpg" alt="profile-avatar" class="profile-image">
+      <span class="status topRight">&nbsp</span>
+    </div>
+    <p style="color: white; margin-left: 10px;  margin-right: 1%; margin-top: 2.3%;">Jane Doe</p>
+    <a href="#" class="" style="color: gray; margin-right: 1%; margin-top: 2.3% "><i class="fa fa-bars"
+        style="margin-right: 5px"></i></a>
+
+
+  </div>
+  <div class="content">
+
+    <hr class="divider">
+
+    <div class="sort">
+      <p style="color: white; margin-left: 30px; margin-top: 5px;">Sort By: </p>
+      <div class="sorter">
+        <i id="sortBtn" class="fa fa-caret-down fa-2x" style="margin-left: 10px; color: white; cursor: pointer;"></i>
+        <div id="sortBtn-content">
+          <a href="#">Trending</a>
+          <a href="#">Breaking News</a>
+          <a href="#">Foriegn</a>
+          <a href="#">Celebrity</a>
+          <a href="#">Campus Gist</a>
+          <a href="#">Top Picks</a>
+        </div>
+      </div>
+
+      <div id="sortButtonDiv">
+        <p style="color: white; margin-right: 30px; margin-top: 12px;">View</p>
+        <button id="gridIcon"><i class="fa fa-th-large fa-2x"></i></button>
+        <button id="listIcon"><i class="fa fa-bars fa-2x"></i></button>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div id="videos" class="row list">
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">345M</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">202M</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">199K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">200k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-1.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=1 data-name="Money Hiest" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=1 data-name="Money Hiest"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">5 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Money Heist - June 06 2023 06:55PM</h5>
+              <p class="list-item-text">
+                On this new episode of Money knhjbkjnj kbkbnj kkbjjnk nkjnkjnjn nkjnkkjnj kjn kn kjjnjknnjbkb ubuibk
+                bubiuk oubuib kjbub ub jkbjkj jbkbk jbkjbkjbjbbkbjbkbkjb jbkbkjbkjbjb bjbkjj jbjbkb jbkjb jbk
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">39M</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">20M</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">92K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">54k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-2.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=2 data-name="Northman" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=2 data-name="Northman"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">15 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Northman - June 03 2023 10:29AM</h5>
+              <p class="list-item-text">
+                A classic tale of love and deciet
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">35M</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">22M</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">192K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">280k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-3.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=3 data-name="Kings Man" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=3 data-name="Kings Man"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">24 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Kings Man - June 01 2023 04:21PM</h5>
+              <p class="list-item-text">
+                The kings man is nobody's man
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">87K</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">69K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">15K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">20k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-4.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=4 data-name="Adam Project" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=4 data-name="Adam Project"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">10 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Adam Project - May 24 2023 11:33AM</h5>
+              <p class="list-item-text">
+                A whole new adventure awaits you...
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">485M</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">225M</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">190K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">111k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-5.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=5 data-name="Massive Talent" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=5 data-name="Massive Talent"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">53 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Massive Talent - March 22 2023 05:55AM</h5>
+              <p class="list-item-text">
+                On this new episode of Money Heist, we see Nariobi making....
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">317k</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">45k</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">19K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">4k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-6.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=6 data-name="Free guy" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=6 data-name="Free guy"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">30 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Free guy - Feb 03 2023 06:55PM</h5>
+              <p class="list-item-text">
+                On this new episode of Money Heist, we see Nariobi making....
+              <p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">185M</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">50M</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">99K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">45k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-7.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=7 data-name="Unchartered" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=7 data-name="Unchartered"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">13 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Unchartered - Feb 01 2023 10:39PM</h5>
+              <p class="list-item-text">
+                On this new episode of Money Heist, we see Nariobi making....
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item  col-xs-3 col-lg-3">
+          <div id="overlay" class="row">
+            <div class="sort">
+              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">98M</p>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-up fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">10M</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-thumbs-o-down fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">2K</p>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
+                class="fa fa-comment-o fa-2x"></i>
+              <p style="color: white; font-weight: 600; margin-top: 0;">8k</p>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="list-image" alt=""
+              style="background:url('./images/video-8.png');  background-size: cover; background-repeat:no-repeat;">
+              <div id="likeRow" class="row">
+                <i id="likeVideo" data-id=8 data-name="Vikings" style="color: white; font-weight: 900;"
+                  class="fa fa-heart-o fa-2x"></i>
+                <i id="dislikeVideo" data-id=8 data-name="Vikings"
+                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <a id="vidLen" class="btn" href="">22 mins</a>
+              </div>
+            </div>
+            <div class="caption">
+              <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
+                Vikings - Feb 03 2023 06:47AM</h5>
+              <p class="list-item-text">
+                On this new episode of Money Heist, we see Nariobi making....
+              </p>
+              <div class="col-xs-12 col-md-6">
+                <span class="tracker-badge">0 TRACKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
