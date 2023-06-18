@@ -312,7 +312,7 @@ input:focus {
 }
 
 #likeRow {
-  margin-top: 70%;
+  margin-top: 24vh;
   display: inline-block;
   margin-left: 10px;
 }
@@ -325,11 +325,11 @@ input:focus {
   background-color:#21211A;
   color: white;
   pointer-events: none;
-  margin-left: 210px;
+  margin-left: 12vw;
 }
 
 .item.list-item #vidLen{
-  margin-left: 270px;
+  margin-left: 16vw;
 }
 
 .item #overlay{
@@ -341,12 +341,36 @@ input:focus {
 }
 
 #overlay{
-  margin-left: 5%; 
+  margin-left: 1vw; 
   position: absolute;
 }
 
 .item.list-item #overlay{
   margin-left: 2%;
+}
+
+.reactions {
+  display: flex;
+  flex-direction: row;
+}
+
+#searchInput2 textarea:focus,
+input:focus {
+  outline: none;
+}
+
+#searchInput2 {
+  width: 100%;
+  height: 50px;
+  margin-left: 3%;
+  margin-top: 3%;
+  font-weight: 200;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #21211A;
+  color: white;
+  border: none;
+  border-radius: 20px;
 }
 
 @media (max-width: 600px) {
@@ -369,4 +393,31 @@ input:focus {
     display: none;
   }
 
+}
+
+@media (max-width: 1500px) {
+  #vidLen {
+    margin-left: 9vw;
+    margin-bottom: 1vh;
+  }
+
+  #likeRow {
+    margin-top: 27vh;
+  }
+
+  .item.list-item #likeRow {
+    margin-top: 27vh;
+  }
+
+  .item.list-item #vidLen{
+    margin-left: 13vw;
+  }
+
+  .reactions {
+    max-width: 2vw;
+  }
+
+  #overlay{
+    margin-left: 0; 
+  }
 }

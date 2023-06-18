@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video tracker</title>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </head>
 
 <body id="top">
@@ -85,23 +87,25 @@
     <div class="container">
 
       <div id="videos" class="row list">
+
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">345M</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">202M</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">199K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">200k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal  thumbnail" data-toggle="modal" data-target="#videoModal" data-id=1
+            data-name="Money Heist">
             <div class="list-image" alt=""
               style="background:url('./images/video-1.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
@@ -116,8 +120,8 @@
               <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
                 Money Heist - June 06 2023 06:55PM</h5>
               <p class="list-item-text">
-                On this new episode of Money knhjbkjnj kbkbnj kkbjjnk nkjnkjnjn nkjnkkjnj kjn kn kjjnjknnjbkb ubuibk
-                bubiuk oubuib kjbub ub jkbjkj jbkbk jbkjbkjbjbbkbjbkbkjb jbkbkjbkjbjb bjbkjj jbjbkb jbkjb jbk
+                On this new episode of Money heist, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
                 <span class="tracker-badge">0 TRACKS</span>
@@ -128,21 +132,22 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">39M</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">20M</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">92K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">54k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=2
+            data-name="Northman">
             <div class="list-image" alt=""
               style="background:url('./images/video-2.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
@@ -169,21 +174,22 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">35M</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">22M</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">192K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">280k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=3
+            data-name="Kings Man">
             <div class="list-image" alt=""
               style="background:url('./images/video-3.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
@@ -209,21 +215,22 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">87K</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">69K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">15K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">20k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=4
+            data-name="Adam Project">
             <div class="list-image" alt=""
               style="background:url('./images/video-4.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
@@ -250,36 +257,38 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">485M</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">225M</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">190K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">111k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=5
+            data-name="Death on the Nile">
             <div class="list-image" alt=""
               style="background:url('./images/video-5.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
-                <i id="likeVideo" data-id=5 data-name="Massive Talent" style="color: white; font-weight: 900;"
+                <i id="likeVideo" data-id=5 data-name="Death on the Nile" style="color: white; font-weight: 900;"
                   class="fa fa-heart-o fa-2x"></i>
-                <i id="dislikeVideo" data-id=5 data-name="Massive Talent"
+                <i id="dislikeVideo" data-id=5 data-name="Death on the Nile"
                   style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
                 <a id="vidLen" class="btn" href="">53 mins</a>
               </div>
             </div>
             <div class="caption">
               <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
-                Massive Talent - March 22 2023 05:55AM</h5>
+                Death on the Nile - March 22 2023 05:55AM</h5>
               <p class="list-item-text">
-                On this new episode of Money Heist, we see Nariobi making....
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
                 <span class="tracker-badge">0 TRACKS</span>
@@ -291,36 +300,38 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">317k</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">45k</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">19K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">4k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=6
+            data-name="Halo">
             <div class="list-image" alt=""
               style="background:url('./images/video-6.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
-                <i id="likeVideo" data-id=6 data-name="Free guy" style="color: white; font-weight: 900;"
+                <i id="likeVideo" data-id=6 data-name="Halo" style="color: white; font-weight: 900;"
                   class="fa fa-heart-o fa-2x"></i>
-                <i id="dislikeVideo" data-id=6 data-name="Free guy"
-                  style="color: white; font-weight: 900; display: none;" class="fa fa-heart fa-2x"></i>
+                <i id="dislikeVideo" data-id=6 data-name="Halo" style="color: white; font-weight: 900; display: none;"
+                  class="fa fa-heart fa-2x"></i>
                 <a id="vidLen" class="btn" href="">30 mins</a>
               </div>
             </div>
             <div class="caption">
               <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
-                Free guy - Feb 03 2023 06:55PM</h5>
+                Halo - Feb 03 2023 06:55PM</h5>
               <p class="list-item-text">
-                On this new episode of Money Heist, we see Nariobi making....
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               <p>
               <div class="col-xs-12 col-md-6">
                 <span class="tracker-badge">0 TRACKS</span>
@@ -332,21 +343,22 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">185M</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">50M</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">99K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">45k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=7
+            data-name="Unchartered">
             <div class="list-image" alt=""
               style="background:url('./images/video-7.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
@@ -361,7 +373,8 @@
               <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
                 Unchartered - Feb 01 2023 10:39PM</h5>
               <p class="list-item-text">
-                On this new episode of Money Heist, we see Nariobi making....
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
                 <span class="tracker-badge">0 TRACKS</span>
@@ -373,21 +386,22 @@
 
         <div class="item  col-xs-3 col-lg-3">
           <div id="overlay" class="row">
-            <div class="sort">
-              <i style=" margin-right: 5px; margin-top: -5px; color: white;" class="fa fa-eye fa-2x"></i>
+            <div class="reactions">
+              <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">98M</p>
-              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-up fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px;  margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-up"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">10M</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-thumbs-o-down fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-thumbs-o-down"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">2K</p>
-              <i style=" margin-right: 5px; margin-left: 15px; margin-top: -5px; color: white;"
-                class="fa fa-comment-o fa-2x"></i>
+              <i style=" margin-right: 5px; margin-left: 15px; margin-top: 0; color: white;"
+                class="fa fa-comment-o"></i>
               <p style="color: white; font-weight: 600; margin-top: 0;">8k</p>
             </div>
           </div>
-          <div class="thumbnail">
+          <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=8
+            data-name="Vikings">
             <div class="list-image" alt=""
               style="background:url('./images/video-8.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
@@ -402,7 +416,8 @@
               <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
                 Vikings - Feb 03 2023 06:47AM</h5>
               <p class="list-item-text">
-                On this new episode of Money Heist, we see Nariobi making....
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
                 <span class="tracker-badge">0 TRACKS</span>
@@ -418,6 +433,18 @@
 
 
 
+  </div>
+
+  <div class="modal" style="margin-top: 10vh; margin-left: 15%;" id="videoModal" tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="col-sm-10" role="document">
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="row" id="videoContent"></div>
+      </div>
+
+    </div>
   </div>
 
 
