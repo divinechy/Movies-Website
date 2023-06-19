@@ -1,3 +1,25 @@
+var c1 = 0;
+var c2 = 0;
+var c3 = 0;
+var c4 = 0;
+var c5 = 0;
+var c6 = 0;
+var c7 = 0;
+var c8 = 0;
+var c9 = 0;
+var counter = 0;
+var numArray = [];
+
+$('#k1').text(c1);
+$('#k2').text(c2);
+$('#k3').text(c3);
+$('#k4').text(c4);
+$('#k5').text(c5);
+$('#k6').text(c6);
+$('#k7').text(c7);
+$('#k8').text(c8);
+$('#k9').text(c9);
+
 $(document).ready(function () {
   $("#searcher").hide();
   $('#listIcon').click(function (e) {
@@ -134,6 +156,199 @@ $(document).on('click', '.viewVideoModal', function (e) {
   </div>
   `);
 
+});
+
+$(document).on('click', '.tracker-badge', function (e) {
+  e.stopPropagation();
+  var selectedId = $(this).attr('data-id');
+  var sel = document.querySelector('#trackers[data-id="' + selectedId + '"]');
+  sel.classList.toggle("show");
+});
+
+
+$(document).on('click', '#trackers', function (e) {
+  e.stopPropagation();
+});
+
+$(document).on('click', '#addTracker', function (e) {
+  e.stopPropagation();
+  var selectedId = $(this).attr('data-id');
+  var badge = document.querySelector('.tracker-badge[data-id="' + selectedId + '"]');
+  switch (selectedId) {
+    case "1":
+      c1++;
+      $('#k1').text(c1);
+      $(badge).css('background-color', 'red');
+      break;
+    case "2":
+      c2++;
+      $('#k2').text(c2);
+      $(badge).css('background-color', 'red');
+      break;
+    case "3":
+      c3++;
+      $('#k3').text(c3);
+      $(badge).css('background-color', 'red');
+      break;
+    case "4":
+      c4++;
+      $('#k4').text(c4);
+      $(badge).css('background-color', 'red');
+      break;
+    case "5":
+      c5++;
+      $('#k5').text(c5);
+      $(badge).css('background-color', 'red');
+      break;
+    case "6":
+      c6++;
+      $('#k6').text(c6);
+      $(badge).css('background-color', 'red');
+      break;
+    case "7":
+      c7++;
+      $('#k7').text(c7);
+      $(badge).css('background-color', 'red');
+      break;
+    case "8":
+      c8++;
+      $('#k8').text(c8);
+      $(badge).css('background-color', 'red');
+      break;
+  }
+
+  var sel = document.querySelector('#trackers[data-id="' + selectedId + '"]');
+  sel.classList.toggle("show");
+});
+
+var starttime;
+var difftime;
+function start() {
+  starttime = new Date();
+}
+function end() {
+  var now = new Date();
+  difftime = now - starttime;
+}
+
+$('.item').mousedown(start);
+$('.item').mouseup(end);
+
+$('.item').mousedown(function (e) {
+  e.stopPropagation();
+  var selectedId = $(this).attr('data-id');
+  clearTimeout(this.downTimer);
+  this.downTimer = setTimeout(function () {
+    var isSelected = document.querySelector('#isSelected[data-id="' + selectedId + '"]');
+    isSelected.classList.toggle("show");
+
+    if ($(isSelected).is(':visible')) {
+      counter++;
+      numArray.push(selectedId);
+    }
+    else {
+      counter--;
+      var index = numArray.indexOf(selectedId);
+      if (index > -1) {
+        numArray.splice(index, 1);
+      }
+    }
+    var sel = document.querySelector('#trackers[data-id="' + 9 + '"]');
+    if (counter > 0) {
+      $(sel).css("visibility", "visible");
+    }
+    else {
+      $(sel).css("visibility", "hidden");
+    }
+    console.log('the array is ', numArray);
+  }, 1000);
+}).click(function (e) {
+  console.log('the target is ', e.target.id);
+  console.log(e.target);
+  if (e.target.id == "list-image" || e.target.id == "likeVideo" || e.target.id == "dislikeVideo" || e.target.id == "tracker-badge" ||
+    e.target.id == "addTracker" || e.target.id == "k1" || e.target.id == "k2" || e.target.id == "k3" ||
+    e.target.id == "k4" || e.target.id == "k5" || e.target.id == "k6" || e.target.id == "k7" || e.target.id == "k8" ||
+    e.target.id == "t1" || e.target.id == "t2" || e.target.id == "t3" ||
+    e.target.id == "t4" || e.target.id == "t5" || e.target.id == "t6" || e.target.id == "t7" || e.target.id == "t8" || e.target.id == "searchInput3"
+  ) {
+    if (difftime >= 1000) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    else {
+      //click not long press
+    }
+  }
+  else {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+}).mouseup(function (e) {
+  clearTimeout(this.downTimer);
+});
+
+
+$(document).on('click', '#addMultiple', function () {
+  counter = 0;
+  for (var i = 0; i < numArray.length; i++) {
+    var selectedId = numArray[i];
+    var badge = document.querySelector('.tracker-badge[data-id="' + selectedId + '"]');
+    var isSelected = document.querySelector('#isSelected[data-id="' + selectedId + '"]');
+    switch (selectedId) {
+      case "1":
+        c1++;
+        $('#k1').text(c1);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "2":
+        c2++;
+        $('#k2').text(c2);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "3":
+        c3++;
+        $('#k3').text(c3);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "4":
+        c4++;
+        $('#k4').text(c4);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "5":
+        c5++;
+        $('#k5').text(c5);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "6":
+        c6++;
+        $('#k6').text(c6);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "7":
+        c7++;
+        $('#k7').text(c7);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+      case "8":
+        c8++;
+        $('#k8').text(c8);
+        isSelected.classList.toggle("show");
+        $(badge).css('background-color', 'red');
+        break;
+    }
+  }
+  var sel = document.querySelector('#trackers[data-id="' + 9 + '"]');
+  $(sel).css("visibility", "hidden");
+  numArray = [];
 });
 
 

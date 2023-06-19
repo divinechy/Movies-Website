@@ -279,7 +279,7 @@ input:focus {
 }
 
 .container {
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 5%;
   margin-bottom: 20%;
   width: 85%;
@@ -290,7 +290,7 @@ input:focus {
   height: 30px;
   color: white;
   width: 100px;
-  background-color: red;
+  background-color: #3E3E37;
   text-align: center;
   border-radius: 35px;
   margin-top: 20px;
@@ -298,6 +298,85 @@ input:focus {
   font-weight: 400;
   padding: 5px;
   cursor: pointer;
+  position: relative;
+}
+
+.tracker-badge .tracker-list {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: #5D5D57;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.tracker-badge .tracker-list::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.tracker-badge .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+.body-tracker-badge {
+  height: 30px;
+  color: white;
+  width: 100px;
+  background-color: #3E3E37;
+  text-align: center;
+  border-radius: 35px;
+  margin-top: 20px;
+  margin-left: 50%;
+  font-weight: 400;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  visibility: hidden;
+}
+
+.body-tracker-badge .body-tracker-list {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: #5D5D57;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.body-tracker-badge .body-tracker-list::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.body-tracker-badge .show {
+  visibility: visible;
+  animation: fadeIn 1s;
 }
 
 .item.list-item .tracker-badge {
@@ -371,6 +450,78 @@ input:focus {
   color: white;
   border: none;
   border-radius: 20px;
+}
+
+#searchInput3 textarea:focus,
+input:focus {
+  outline: none;
+}
+
+#searchInput3 {
+  width: 100%;
+  height: 50px;
+  margin-left: 3%;
+  margin-top: 3%;
+  font-weight: 200;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #21211A;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.listTrackerItem {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%; 
+  margin-top: 10%;
+}
+
+.listTrackerItem p{
+  color: #454540; 
+  font-weight: 400; 
+  margin-top: 0; 
+  font-size: 15px;
+}
+
+.listTrackerItem i{
+  margin-left: auto; 
+  margin-right: 10%; 
+  margin-top: 5px; 
+  color: #454540;
+}
+
+.listTrackerItem:hover{
+  background-color: red;
+  border-radius: 10px;
+  padding-left: 3%;
+  margin-right: 3%;
+}
+
+.listTrackerItem:hover p{
+  color: white;
+}
+
+.listTrackerItem:hover i{
+  color: white;
+}
+
+#addTracker{
+ cursor: pointer;
+}
+
+#isSelected{
+  position: absolute; 
+  display: none; 
+  color: white; 
+  margin-left: 80%; 
+  margin-top: 10%;
+}
+
+.item.list-item #isSelected{
+  margin-left: 35%;
+  margin-top: 5%;
 }
 
 @media (max-width: 600px) {

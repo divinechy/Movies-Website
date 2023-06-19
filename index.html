@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
+
 </head>
 
 <body id="top">
@@ -88,7 +90,7 @@
 
       <div id="videos" class="row list">
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=1>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -104,9 +106,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">200k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=1 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal  thumbnail" data-toggle="modal" data-target="#videoModal" data-id=1
             data-name="Money Heist">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-1.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=1 data-name="Money Hiest" style="color: white; font-weight: 900;"
@@ -117,6 +120,7 @@
               </div>
             </div>
             <div class="caption">
+
               <h5 class="list-item-heading" style="margin-left: 10% ; color: #6D6D69;">
                 Money Heist - June 06 2023 06:55PM</h5>
               <p class="list-item-text">
@@ -124,13 +128,37 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=1>
+                  <p id="k1" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t1" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=1>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=1
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=2>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -146,9 +174,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">54k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=2 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=2
             data-name="Northman">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-2.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=2 data-name="Northman" style="color: white; font-weight: 900;"
@@ -165,14 +194,38 @@
                 A classic tale of love and deciet
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=2>
+                  <p id="k2" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t2" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=2>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=2
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=3>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -188,9 +241,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">280k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=3 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=3
             data-name="Kings Man">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-3.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=3 data-name="Kings Man" style="color: white; font-weight: 900;"
@@ -207,13 +261,37 @@
                 The kings man is nobody's man
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=3>
+                  <p id="k3" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t3" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=3>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=3
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=4>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -229,9 +307,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">20k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=4 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=4
             data-name="Adam Project">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-4.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=4 data-name="Adam Project" style="color: white; font-weight: 900;"
@@ -248,14 +327,38 @@
                 A whole new adventure awaits you...
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=4>
+                  <p id="k4" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t4" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=4>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=4
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=5>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -271,9 +374,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">111k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=5 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=5
             data-name="Death on the Nile">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-5.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=5 data-name="Death on the Nile" style="color: white; font-weight: 900;"
@@ -291,14 +395,38 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=5>
+                  <p id="k5" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t5" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=5>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=5
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=6>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -314,9 +442,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">4k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=6 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=6
             data-name="Halo">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-6.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=6 data-name="Halo" style="color: white; font-weight: 900;"
@@ -334,14 +463,38 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               <p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=6>
+                  <p id="k6" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t6" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=6>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=6
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=7>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -357,9 +510,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">45k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=7 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=7
             data-name="Unchartered">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-7.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=7 data-name="Unchartered" style="color: white; font-weight: 900;"
@@ -377,14 +531,38 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=7>
+                  <p id="k7" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t7" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=7>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=7
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="item  col-xs-3 col-lg-3">
+        <div class="item  col-xs-3 col-lg-3" data-id=8>
           <div id="overlay" class="row">
             <div class="reactions">
               <i style=" margin-right: 5px; margin-top: 0; color: white;" class="fa fa-eye"></i>
@@ -400,9 +578,10 @@
               <p style="color: white; font-weight: 600; margin-top: 0;">8k</p>
             </div>
           </div>
+          <i id="isSelected" data-id=8 class="fa fa-check fa-2x"></i>
           <div class="viewVideoModal thumbnail" data-toggle="modal" data-target="#videoModal" data-id=8
             data-name="Vikings">
-            <div class="list-image" alt=""
+            <div class="list-image" alt="" id="list-image"
               style="background:url('./images/video-8.png');  background-size: cover; background-repeat:no-repeat;">
               <div id="likeRow" class="row">
                 <i id="likeVideo" data-id=8 data-name="Vikings" style="color: white; font-weight: 900;"
@@ -420,7 +599,31 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div class="col-xs-12 col-md-6">
-                <span class="tracker-badge">0 TRACKS</span>
+                <span class="tracker-badge" id="tracker-badge" data-id=8>
+                  <p id="k8" style="margin: 0; padding:0; width: 30px;"></p>
+                  <p id="t8" style="margin-top: -20px; margin-left: 20px;">TRACKS</p>
+                  <span class="tracker-list" id="trackers" data-id=8>
+
+                    <input type="text" id="searchInput3" placeholder="Search Trackers"
+                      style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+                      name="searchInput">
+                    <div class="listTrackerItem">
+                      <p>Trending and classy</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Technology</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Education</p><i class="fa fa-check"></i>
+                    </div>
+                    <div class="listTrackerItem">
+                      <p>Gaming</p><i class="fa fa-check"></i>
+                    </div>
+                    <i id="addTracker" data-id=8
+                      style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+                      class="fa fa-plus-circle fa-2x"></i>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -448,6 +651,30 @@
   </div>
 
 
+  <span class="body-tracker-badge" data-id=9>
+    <p id="k9" style="margin-top: 0; padding:0; width: 30px; position: absolute;"></p>
+    <p style="margin-top: 0; margin-left: 25px; position: absolute;">TRACKS</p>
+    <span class="body-tracker-list" id="trackers" data-id=9>
+
+      <input type="text" id="searchInput3" placeholder="Search Trackers"
+        style="margin-top: 10%; margin-left: 8%; width: 80%; background-color: #E5E5E5; color: #32322C;"
+        name="searchInput">
+      <div class="listTrackerItem">
+        <p>Trending and classy</p><i class="fa fa-check"></i>
+      </div>
+      <div class="listTrackerItem">
+        <p>Technology</p><i class="fa fa-check"></i>
+      </div>
+      <div class="listTrackerItem">
+        <p>Education</p><i class="fa fa-check"></i>
+      </div>
+      <div class="listTrackerItem">
+        <p>Gaming</p><i class="fa fa-check"></i>
+      </div>
+      <i id="addMultiple" data-id=9 style=" margin-left: auto; margin-right: 10%; margin-top: 10%; color: red;"
+        class="fa fa-plus-circle fa-2x"></i>
+    </span>
+  </span>
 
 
   <script src="./js/script.js"></script>
