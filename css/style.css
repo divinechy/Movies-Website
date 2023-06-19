@@ -401,30 +401,30 @@ input:focus {
 }
 
 #vidLen {
-  background-color:#21211A;
+  background-color: #21211A;
   color: white;
   pointer-events: none;
   margin-left: 12vw;
 }
 
-.item.list-item #vidLen{
+.item.list-item #vidLen {
   margin-left: 16vw;
 }
 
-.item #overlay{
+.item #overlay {
   display: none;
 }
 
-.item:hover #overlay{
+.item:hover #overlay {
   display: block;
 }
 
-#overlay{
-  margin-left: 1vw; 
+#overlay {
+  margin-left: 1vw;
   position: absolute;
 }
 
-.item.list-item #overlay{
+.item.list-item #overlay {
   margin-left: 2%;
 }
 
@@ -474,54 +474,69 @@ input:focus {
 .listTrackerItem {
   display: flex;
   flex-direction: row;
-  margin-left: 5%; 
+  margin-left: 5%;
   margin-top: 10%;
 }
 
-.listTrackerItem p{
-  color: #454540; 
-  font-weight: 400; 
-  margin-top: 0; 
+.listTrackerItem p {
+  color: #454540;
+  font-weight: 400;
+  margin-top: 0;
   font-size: 15px;
 }
 
-.listTrackerItem i{
-  margin-left: auto; 
-  margin-right: 10%; 
-  margin-top: 5px; 
+.listTrackerItem i {
+  margin-left: auto;
+  margin-right: 10%;
+  margin-top: 5px;
   color: #454540;
 }
 
-.listTrackerItem:hover{
+.listTrackerItem:hover {
   background-color: red;
   border-radius: 10px;
   padding-left: 3%;
   margin-right: 3%;
 }
 
-.listTrackerItem:hover p{
+.listTrackerItem:hover p {
   color: white;
 }
 
-.listTrackerItem:hover i{
+.listTrackerItem:hover i {
   color: white;
 }
 
-#addTracker{
- cursor: pointer;
+#addTracker {
+  cursor: pointer;
 }
 
-#isSelected{
-  position: absolute; 
-  display: none; 
-  color: white; 
-  margin-left: 80%; 
+#isSelected {
+  position: absolute;
+  display: none;
+  color: white;
+  margin-left: 80%;
   margin-top: 10%;
 }
 
-.item.list-item #isSelected{
+.item.list-item #isSelected {
   margin-left: 35%;
   margin-top: 5%;
+}
+
+.go-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  z-index: 2;
+  visibility: hidden;
+  border-radius: 50%;
+  transition: 0.25s ease-in;
 }
 
 @media (max-width: 600px) {
@@ -560,7 +575,7 @@ input:focus {
     margin-top: 27vh;
   }
 
-  .item.list-item #vidLen{
+  .item.list-item #vidLen {
     margin-left: 13vw;
   }
 
@@ -568,7 +583,7 @@ input:focus {
     max-width: 2vw;
   }
 
-  #overlay{
-    margin-left: 0; 
+  #overlay {
+    margin-left: 0;
   }
 }

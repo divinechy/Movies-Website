@@ -35,6 +35,10 @@ $(document).ready(function () {
     $('#listIcon').css('color', '#6c6c66');
     $('#videos .item').removeClass('list-item');
   });
+
+
+window.onscroll = function() {scrollFunction()};
+
 });
 
 
@@ -351,5 +355,10 @@ $(document).on('click', '#addMultiple', function () {
   numArray = [];
 });
 
-
-
+function scrollFunction() {
+  if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+    $('.go-top').css("visibility", "visible");
+  } else {
+    $('.go-top').css("visibility", "hidden");
+  }
+}
